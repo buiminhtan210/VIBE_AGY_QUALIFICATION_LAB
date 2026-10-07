@@ -6,16 +6,23 @@ Finish Q001 Canonical Project bootstrap and stop before runtime provisioning.
 
 ## Last Known Good State
 
-`INITIAL_REMOTE@6796e0ac7cbd9fb7adfd2bef9a46e609125e57a7`
+`BOOTSTRAP_CONTENT@0f35b67b0d77e47976df842900020f84d655f667`
 
 ## Current Pack
 
-`PACK-03B0_QUALIFICATION_LAB_CANONICAL_PROJECT_BOOTSTRAP`
+`PACK-03B0 = ACCEPTED_AFTER_TRANSPORT_RECOVERY` local candidate
+
+Active product Pack: `NONE`.
 
 ## Completed work
 
 - Exact remote/base preflight and clone verification.
-- Runtime-neutral template materialization and static fixture preparation.
+- Runtime-neutral template materialization and static fixture completion.
+- Bootstrap content checkpoint created at
+  `0f35b67b0d77e47976df842900020f84d655f667`.
+- Two Codex push attempts preserved as remote Internal Server Error failures.
+- Manual GitHub Desktop bootstrap push and independent remote readback passed.
+- Local acceptance state prepared without registry or runtime mutation.
 
 ## Files/modules most relevant
 
@@ -26,12 +33,16 @@ Finish Q001 Canonical Project bootstrap and stop before runtime provisioning.
 
 ## Verification performed
 
-Final commit, push, remote readback, registry, and PROJECT_READY verification are
-pending.
+- Local bootstrap SHA = local `origin/main` = verified remote bootstrap SHA.
+- Acceptance-state delta is limited to four `.vibe` files.
+- Acceptance commit is local-only and must be manually pushed.
+- Q001 Registry and final operational PROJECT_READY verification remain pending.
 
 ## Known issues / blockers
 
-Antigravity runtime lane is intentionally not provisioned or qualified.
+- Antigravity runtime lane is `NOT_YET_PROVISIONED`.
+- Local `PROJECT_READY` is candidate state until acceptance push, remote readback,
+  Q001 registry creation, and final recovery verification pass.
 
 ## Important decisions
 
@@ -40,8 +51,9 @@ PACK-03B1.
 
 ## Recovery / rollback
 
-Preserve current state and use the initial remote SHA as the recovery reference.
-No destructive Git recovery is authorized.
+Preserve the bootstrap checkpoint and local acceptance commit. No reset, clean,
+rebase, amend, force, branch switch, or other destructive Git recovery is
+authorized.
 
 ## Code Review handoff
 
@@ -51,5 +63,6 @@ No destructive Git recovery is authorized.
 
 ## Recommended next action
 
-Complete PACK-03B0 acceptance, then return to the Orchestrator. Do not start
-PACK-03B1 in this Pack.
+Use GitHub Desktop to push the exact local acceptance commit, then perform remote
+readback and create the Q001 Registry row under a separately authorized closing
+gate. Do not start PACK-03B1 before that gate passes.

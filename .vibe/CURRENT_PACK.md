@@ -1,7 +1,8 @@
 # Current Pack
 
 - Pack ID: `PACK-03B0_QUALIFICATION_LAB_CANONICAL_PROJECT_BOOTSTRAP`
-- Status: Active
+- Status: `ACCEPTED_AFTER_TRANSPORT_RECOVERY` — local candidate pending manual
+  acceptance push, registry, and final recovery verification
 
 ## Objective
 
@@ -18,6 +19,8 @@ does not expose CPGS or other business projects to qualification risk.
 - Dependency-free static browser fixture.
 - Project context and `.vibe` initialization.
 - Normal main-branch commits and push under explicit Pack authority.
+
+Active product Pack: `NONE`.
 
 ## Dependencies
 
@@ -57,4 +60,14 @@ STOP after Q001 PROJECT_READY verification. Do not provision Antigravity.
 
 ## Result / Evidence
 
-Pending final PACK-03B0 acceptance record.
+- Bootstrap content checkpoint:
+  `0f35b67b0d77e47976df842900020f84d655f667`.
+- Codex Git push transport: `FAILED_WITH_REMOTE_INTERNAL_SERVER_ERROR` twice.
+- Manual GitHub Desktop bootstrap push: `PASS`.
+- Bootstrap remote readback: `PASS`.
+- Project state delta: bounded to the four PACK-03B0 `.vibe` acceptance files.
+- Acceptance commit: local-only candidate pending manual push.
+- Q001 Project Registry row: not yet created.
+- Antigravity runtime lane: `NOT_YET_PROVISIONED`.
+- Operational PROJECT_READY remains gated on acceptance push, remote readback,
+  registry creation, and final recovery verification.
