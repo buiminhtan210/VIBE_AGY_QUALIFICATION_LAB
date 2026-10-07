@@ -11,7 +11,7 @@ Append verification evidence; do not erase prior accepted evidence without reaso
 | Post-clone identity | repo root, origin, branch, HEAD, clean state | PASS | exact authorized identity/base |
 | Runtime boundary | project inventory | PASS | runtime-neutral project; no runtime deployment files |
 | Bootstrap and acceptance push/readback | GitHub Desktop plus independent readback | PASS | accepted checkpoint `26a52191930541f3f669febb39ddaefa4cef3ced` |
-| Registry | Q001 exact-row/uniqueness check | PENDING | registry update follows PACK-03B0R3B finalization push/readback |
+| Registry | Q001 exact-row/uniqueness check | PASS | Q001 registered at `PROJECT_READY@9058c176c4c22c22c98bb18e4667610125b5f48c` |
 
 Known limitation: Antigravity runtime lane is intentionally not provisioned or
 qualified by PACK-03B0.
@@ -32,8 +32,7 @@ qualified by PACK-03B0.
 
 Project-state disposition: `PROJECT_READY / COMPLETE`.
 
-Operational disposition: Q001 Registry closeout remains pending until the
-PACK-03B0R3B finalization commit is manually pushed and read back.
+Operational disposition: Q001 Registry closeout is `COMPLETE`.
 
 ## 2026-10-07 — PACK-03B0R3B final project-state commit
 
@@ -43,7 +42,22 @@ PACK-03B0R3B finalization commit is manually pushed and read back.
 | Stale state wording | exact review of four `.vibe` files | PASS | acceptance push/readback now recorded PASS |
 | Final-state delta | exact changed-path inventory | PASS | bounded `.vibe` state files only |
 | Project Registry | SHA-256 readback | NOT RUN | no registry mutation authorized in PACK-03B0R3B |
-| Push | Pack boundary | NOT RUN | finalization commit is local-only for manual GitHub Desktop push |
+| Finalization push | GitHub Desktop | PASS | `9058c176c4c22c22c98bb18e4667610125b5f48c` |
+| Finalization remote readback | independent remote plus local tracking readback | PASS | remote `main` and `origin/main` match verified baseline |
 
 Known limitation: Codex Git push transport failed with remote Internal Server
 Error; GitHub Desktop is the verified manual transport for the accepted commits.
+
+## 2026-10-07 — PACK-03B0R3C registry closeout and state reflection
+
+| Check | Command/Method | Result | Evidence/Notes |
+|---|---|---|---|
+| Synchronized baseline | branch/HEAD/origin-main/ahead-behind/status | PASS | `main`, `9058c176c4c22c22c98bb18e4667610125b5f48c`, `0/0`, clean |
+| Q001 Registry row | exact row readback | PASS | unique ID/project/path/remote; LKG uses verified baseline |
+| P001 Registry row | exact preimage comparison | PASS | unchanged |
+| Operational Registry closeout | durable state readback | COMPLETE | Q001 registered; project state complete |
+| Runtime boundary | exact action/path inventory | PASS | Antigravity lane remains `NOT_YET_PROVISIONED` |
+| Reflection push | Pack boundary | NOT RUN | reflection commit is local-only for final GitHub Desktop push |
+
+Next safe gate after the reflection commit is pushed and read back:
+`PACK-03B1 — Universal Antigravity host lane provisioning`.

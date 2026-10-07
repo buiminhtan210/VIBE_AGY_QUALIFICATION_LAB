@@ -6,7 +6,7 @@ Finish Q001 Canonical Project bootstrap and stop before runtime provisioning.
 
 ## Last Known Good State
 
-`ACCEPTED_PROJECT_STATE@26a52191930541f3f669febb39ddaefa4cef3ced`
+`PROJECT_READY@9058c176c4c22c22c98bb18e4667610125b5f48c`
 
 ## Current Pack
 
@@ -26,7 +26,12 @@ Active product Pack: `NONE`.
   `26a52191930541f3f669febb39ddaefa4cef3ced` was manually pushed through
   GitHub Desktop.
 - Acceptance remote and local `origin/main` readbacks passed at the exact SHA.
-- Final durable project state was prepared without registry or runtime mutation.
+- Finalization commit
+  `9058c176c4c22c22c98bb18e4667610125b5f48c` was manually pushed through
+  GitHub Desktop and read back successfully.
+- Q001 was registered with the verified Project Ready baseline.
+- Operational Registry closeout is `COMPLETE`.
+- Registry state was reflected without runtime mutation.
 
 ## Files/modules most relevant
 
@@ -37,18 +42,20 @@ Active product Pack: `NONE`.
 
 ## Verification performed
 
-- Accepted project-state SHA = local `origin/main` = independently verified remote
-  SHA: `26a52191930541f3f669febb39ddaefa4cef3ced`.
+- Verified Project Ready baseline = local `origin/main` = independently verified
+  remote SHA: `9058c176c4c22c22c98bb18e4667610125b5f48c`.
 - `PROJECT_READY project state = COMPLETE`.
-- `OPERATIONAL REGISTRY CLOSEOUT = PENDING`.
-- PACK-03B0R3B final-state delta is limited to `.vibe` state files.
+- `OPERATIONAL REGISTRY CLOSEOUT = COMPLETE`.
+- System Registry baseline:
+  `PROJECT_READY@9058c176c4c22c22c98bb18e4667610125b5f48c`.
+- Project Registry: `Q001 = REGISTERED`.
 
 ## Known issues / blockers
 
 - Antigravity runtime lane is `NOT_YET_PROVISIONED`.
-- Q001 Registry row is not yet created.
-- PACK-03B0R3B finalization commit must be manually pushed and read back before
-  Registry closeout.
+- Codex Git push transport limitation remains
+  `FAILED_WITH_REMOTE_INTERNAL_SERVER_ERROR`.
+- Manual GitHub Desktop transport: `PASS`.
 
 ## Important decisions
 
@@ -69,6 +76,6 @@ authorized.
 
 ## Recommended next action
 
-Use GitHub Desktop to push the exact PACK-03B0R3B finalization commit, then perform
-remote readback and create the Q001 Registry row under a separately authorized
-closing gate. Do not start PACK-03B1 before that gate passes.
+Use GitHub Desktop to push the exact PACK-03B0R3C registry-reflection commit and
+verify remote readback. The next safe gate is PACK-03B1 — Universal Antigravity
+host lane provisioning. This handover does not start PACK-03B1.

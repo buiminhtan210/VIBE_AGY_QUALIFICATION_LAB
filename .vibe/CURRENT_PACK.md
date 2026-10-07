@@ -3,7 +3,7 @@
 - Pack ID: `PACK-03B0_QUALIFICATION_LAB_CANONICAL_PROJECT_BOOTSTRAP`
 - Status: `ACCEPTED_AFTER_TRANSPORT_RECOVERY`
 - Project state: `PROJECT_READY / COMPLETE`
-- Operational Registry closeout: `PENDING`
+- Operational Registry closeout: `COMPLETE`
 
 ## Objective
 
@@ -71,10 +71,17 @@ STOP after Q001 PROJECT_READY verification. Do not provision Antigravity.
   `26a52191930541f3f669febb39ddaefa4cef3ced`.
 - Manual GitHub Desktop acceptance push: `PASS`.
 - Acceptance remote readback: `PASS`.
+- Verified Project Ready baseline:
+  `9058c176c4c22c22c98bb18e4667610125b5f48c`.
+- Manual GitHub Desktop finalization push: `PASS`.
+- Finalization remote readback: `PASS`.
 - Codex Git push transport:
   `KNOWN_LIMITATION / FAILED_WITH_REMOTE_INTERNAL_SERVER_ERROR`.
-- Q001 Project Registry row: not yet created.
+- System Registry baseline:
+  `PROJECT_READY@9058c176c4c22c22c98bb18e4667610125b5f48c`.
+- Project Registry: `Q001 = REGISTERED`.
+- Operational Registry closeout: `COMPLETE`.
 - Antigravity runtime lane: `NOT_YET_PROVISIONED`.
 - Active product Pack: `NONE`.
-- Next safe gate: push and read back the PACK-03B0R3B finalization commit, finalize
-  the Q001 Project Registry row, then open PACK-03B1.
+- Next safe gate after manual push/readback of the registry-reflection commit:
+  `PACK-03B1 — Universal Antigravity host lane provisioning`.
