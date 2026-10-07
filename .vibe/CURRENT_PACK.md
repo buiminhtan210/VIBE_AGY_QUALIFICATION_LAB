@@ -1,8 +1,9 @@
 # Current Pack
 
 - Pack ID: `PACK-03B0_QUALIFICATION_LAB_CANONICAL_PROJECT_BOOTSTRAP`
-- Status: `ACCEPTED_AFTER_TRANSPORT_RECOVERY` — local candidate pending manual
-  acceptance push, registry, and final recovery verification
+- Status: `ACCEPTED_AFTER_TRANSPORT_RECOVERY`
+- Project state: `PROJECT_READY / COMPLETE`
+- Operational Registry closeout: `PENDING`
 
 ## Objective
 
@@ -66,8 +67,14 @@ STOP after Q001 PROJECT_READY verification. Do not provision Antigravity.
 - Manual GitHub Desktop bootstrap push: `PASS`.
 - Bootstrap remote readback: `PASS`.
 - Project state delta: bounded to the four PACK-03B0 `.vibe` acceptance files.
-- Acceptance commit: local-only candidate pending manual push.
+- Accepted project-state checkpoint:
+  `26a52191930541f3f669febb39ddaefa4cef3ced`.
+- Manual GitHub Desktop acceptance push: `PASS`.
+- Acceptance remote readback: `PASS`.
+- Codex Git push transport:
+  `KNOWN_LIMITATION / FAILED_WITH_REMOTE_INTERNAL_SERVER_ERROR`.
 - Q001 Project Registry row: not yet created.
 - Antigravity runtime lane: `NOT_YET_PROVISIONED`.
-- Operational PROJECT_READY remains gated on acceptance push, remote readback,
-  registry creation, and final recovery verification.
+- Active product Pack: `NONE`.
+- Next safe gate: push and read back the PACK-03B0R3B finalization commit, finalize
+  the Q001 Project Registry row, then open PACK-03B1.

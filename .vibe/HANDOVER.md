@@ -6,11 +6,11 @@ Finish Q001 Canonical Project bootstrap and stop before runtime provisioning.
 
 ## Last Known Good State
 
-`BOOTSTRAP_CONTENT@0f35b67b0d77e47976df842900020f84d655f667`
+`ACCEPTED_PROJECT_STATE@26a52191930541f3f669febb39ddaefa4cef3ced`
 
 ## Current Pack
 
-`PACK-03B0 = ACCEPTED_AFTER_TRANSPORT_RECOVERY` local candidate
+`PACK-03B0 = ACCEPTED_AFTER_TRANSPORT_RECOVERY`
 
 Active product Pack: `NONE`.
 
@@ -22,7 +22,11 @@ Active product Pack: `NONE`.
   `0f35b67b0d77e47976df842900020f84d655f667`.
 - Two Codex push attempts preserved as remote Internal Server Error failures.
 - Manual GitHub Desktop bootstrap push and independent remote readback passed.
-- Local acceptance state prepared without registry or runtime mutation.
+- Acceptance commit
+  `26a52191930541f3f669febb39ddaefa4cef3ced` was manually pushed through
+  GitHub Desktop.
+- Acceptance remote and local `origin/main` readbacks passed at the exact SHA.
+- Final durable project state was prepared without registry or runtime mutation.
 
 ## Files/modules most relevant
 
@@ -33,16 +37,18 @@ Active product Pack: `NONE`.
 
 ## Verification performed
 
-- Local bootstrap SHA = local `origin/main` = verified remote bootstrap SHA.
-- Acceptance-state delta is limited to four `.vibe` files.
-- Acceptance commit is local-only and must be manually pushed.
-- Q001 Registry and final operational PROJECT_READY verification remain pending.
+- Accepted project-state SHA = local `origin/main` = independently verified remote
+  SHA: `26a52191930541f3f669febb39ddaefa4cef3ced`.
+- `PROJECT_READY project state = COMPLETE`.
+- `OPERATIONAL REGISTRY CLOSEOUT = PENDING`.
+- PACK-03B0R3B final-state delta is limited to `.vibe` state files.
 
 ## Known issues / blockers
 
 - Antigravity runtime lane is `NOT_YET_PROVISIONED`.
-- Local `PROJECT_READY` is candidate state until acceptance push, remote readback,
-  Q001 registry creation, and final recovery verification pass.
+- Q001 Registry row is not yet created.
+- PACK-03B0R3B finalization commit must be manually pushed and read back before
+  Registry closeout.
 
 ## Important decisions
 
@@ -51,8 +57,8 @@ PACK-03B1.
 
 ## Recovery / rollback
 
-Preserve the bootstrap checkpoint and local acceptance commit. No reset, clean,
-rebase, amend, force, branch switch, or other destructive Git recovery is
+Preserve the bootstrap checkpoint and accepted project-state checkpoint. No reset,
+clean, rebase, amend, force, branch switch, or other destructive Git recovery is
 authorized.
 
 ## Code Review handoff
@@ -63,6 +69,6 @@ authorized.
 
 ## Recommended next action
 
-Use GitHub Desktop to push the exact local acceptance commit, then perform remote
-readback and create the Q001 Registry row under a separately authorized closing
-gate. Do not start PACK-03B1 before that gate passes.
+Use GitHub Desktop to push the exact PACK-03B0R3B finalization commit, then perform
+remote readback and create the Q001 Registry row under a separately authorized
+closing gate. Do not start PACK-03B1 before that gate passes.
