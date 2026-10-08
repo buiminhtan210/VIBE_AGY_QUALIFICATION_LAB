@@ -2,96 +2,85 @@
 
 ## Project provisioning state
 
-Project Provisioning State: PROJECT_READY
+Project Provisioning State: `PROJECT_READY`
 
 - Project ID: `Q001`
 - Canonical path: `D:\VIBE_CODE_WORKSPACE_BASELINE\80_PROJECTS\VIBE_AGY_QUALIFICATION_LAB`
 - Repository disposition: `ESTABLISHED`
 - Repository: `https://github.com/buiminhtan210/VIBE_AGY_QUALIFICATION_LAB`
-- Provisioning record:
-  `90_WORKSPACE/SYSTEM_MAINTENANCE_TASKS/VIBE_UNIVERSAL_PROJECT_RUNTIME_PROVISIONING_01/07_PACK03B0_QUALIFICATION_LAB_PROJECT_PROVISIONING.md`
+- Project Registry: `REGISTERED`
+- Active product Pack: `NONE`
 
-## Last Known Good State
+## Durable project baseline
 
-`PROJECT_READY@9058c176c4c22c22c98bb18e4667610125b5f48c`
-
-## Current status
-
-PACK-03B0 is `ACCEPTED_AFTER_TRANSPORT_RECOVERY`.
-
-`PROJECT_READY project state = COMPLETE`
-
-`OPERATIONAL REGISTRY CLOSEOUT = COMPLETE`
-
-The acceptance commit was manually pushed with GitHub Desktop. Independent remote
-readback and local `origin/main` readback both passed at
-`26a52191930541f3f669febb39ddaefa4cef3ced`.
-
-## What works
-
-- Exact remote repository identity and initial base are verified.
-- Runtime-neutral project context and static fixture are complete.
-- Bootstrap content checkpoint
-  `0f35b67b0d77e47976df842900020f84d655f667` is present on remote `main`.
-- Codex push transport failed twice with remote Internal Server Error; manual
-  GitHub Desktop bootstrap push and independent remote readback passed.
-- Accepted project-state checkpoint
-  `26a52191930541f3f669febb39ddaefa4cef3ced` is present on remote `main` and
-  matches local `origin/main`.
-- Verified Project Ready baseline
-  `9058c176c4c22c22c98bb18e4667610125b5f48c` is present on remote `main` and
-  matches local `origin/main`.
-- System Registry baseline:
-  `PROJECT_READY@9058c176c4c22c22c98bb18e4667610125b5f48c`.
-- Project Registry: `Q001 = REGISTERED`.
-
-## Known issues
-
-- Antigravity runtime lane: `NOT_YET_PROVISIONED`.
-- Codex Git push transport remains a known limitation:
-  `FAILED_WITH_REMOTE_INTERNAL_SERVER_ERROR`.
-- Manual GitHub Desktop transport: `PASS`.
-
-## Current / next Pack
-
-- PACK-03B0: `ACCEPTED_AFTER_TRANSPORT_RECOVERY`.
-- Active product Pack: `NONE`.
-- Next safe gate after the required manual reflection push/readback:
-  `PACK-03B1 — Universal Antigravity host lane provisioning`.
-
-## Verification summary
-
-- Bootstrap manual push: `PASS`.
-- Bootstrap remote readback: `PASS` at
-  `0f35b67b0d77e47976df842900020f84d655f667`.
-- Acceptance commit manual GitHub Desktop push: `PASS`.
-- Acceptance remote readback: `PASS` at
-  `26a52191930541f3f669febb39ddaefa4cef3ced`.
-- Finalization commit manual GitHub Desktop push: `PASS`.
-- Finalization remote readback: `PASS` at
+- Verified Project Ready baseline:
   `9058c176c4c22c22c98bb18e4667610125b5f48c`.
-- Codex Git push transport:
-  `KNOWN_LIMITATION / FAILED_WITH_REMOTE_INTERNAL_SERVER_ERROR`.
-- Project Registry Q001 row: `REGISTERED / PASS`.
-- Operational Registry closeout: `COMPLETE`.
+- Current accepted canonical main before PACK-04A state sync:
+  `ea7c0930a4ae82499b554de7753ff07ac6385f9e`.
+- PACK-03B0: `ACCEPTED_AFTER_TRANSPORT_RECOVERY / HISTORICAL`.
+- PACK-03B1: `HOST_PROVISIONING_PASS_AFTER_RECOVERY / HISTORICAL`.
+- PACK-03B2: `CLOSED_PASS_WITH_LIMITATIONS`.
 
-## Code Review state
+## Qualified runtime state
 
-- Requirement: Not Required for deterministic project bootstrap.
-- Automation Mode: Manual Pack verification.
-- Reviewer Independence: Not applicable.
-- Repository: `https://github.com/buiminhtan210/VIBE_AGY_QUALIFICATION_LAB`
-- Status: `NOT_REQUIRED`
+```text
+Q001_ANTIGRAVITY_LANE = ACTIVE_VERIFIED_WITH_LIMITATIONS
+Q001_ANTIGRAVITY_RUNTIME = QUALIFIED_WITH_LIMITATIONS
+UNIVERSAL_SKILL_OVERLAY = QUALIFIED
+UNIVERSAL_SAFE_RUNNER = QUALIFIED_WITH_WINDOWS_APPROVAL_LIMITATION
+UNIVERSAL_LANE_PROVISIONING = QUALIFIED
+CANONICAL_SOURCE_LOADING = VERIFIED
+BROWSER_RUNTIME_QA = VERIFIED_BOUNDED
+BOUNDED_CREATE_MODIFY_CHECKPOINT_WRITE = VERIFIED
+RETURN_BRIDGE_CURRENT_ACCOUNT = PASS
+NORMAL_WRITE_ROUTING = ENABLED_WITH_LIMITATIONS
+NORMAL_WRITE_ASSIGNMENT = ENABLED_WITH_LIMITATIONS
+MANUAL_PROJECT_SPECIFIC_RUNTIME_FILE_SETUP = 0
+```
+
+- Runtime root:
+  `D:\VIBE_AGENT_RUNTIME\ANTIGRAVITY\VIBE_AGY_QUALIFICATION_LAB`.
+- Runtime main base:
+  `ea7c0930a4ae82499b554de7753ff07ac6385f9e`.
+- Retained smoke branch:
+  `agent/antigravity/pack03b2-write-smoke-20261008`.
+- Retained smoke commit:
+  `52f9de7c0fd521bd26f766dedc9e3c3f5c042f68`.
+
+## Retained limitations
+
+- Backend model identity: `UNVERIFIED`.
+- Terminal permission: `ASK_ON_WINDOWS_NO_CWD_BINDING`.
+- Exact and repeated commands may prompt on every invocation.
+- Additional read prompts may occur.
+- Zero-prompt claim: `NO`.
+- Ordinary local branches share one physical working tree.
+- `STOP_ON_MANDATORY_FAILURE = REQUIRED`.
+- Native file deletion is not newly qualified by Q001.
+- Push, merge, and external network remain separately authorized.
+- Qualification is bounded to the tested Q001 dedicated-clone / Local topology.
+
+## PACK-04 state
+
+- PACK-04A: canonical deployment/state sync; local documentary checkpoint pending
+  manual GitHub Desktop push and remote readback.
+- PACK-04B: `NOT_OPEN / PENDING_PACK04A_REMOTE_READBACK`.
+- PACK-04C: `NOT_STARTED`.
+- ChatGPT fresh-session validation: `NOT_RUN`.
+- SYSTEM KNOWN GOOD: `NOT_YET_ESTABLISHED`.
+- Next system-maintenance gate after PACK-04A remote readback:
+  `PACK-04B_CHATGPT_DEPLOYMENT_SYNC`.
+
+## Transport history
+
+- Codex Git push transport remains a known historical limitation:
+  `FAILED_WITH_REMOTE_INTERNAL_SERVER_ERROR`.
+- GitHub Desktop is the verified manual transport used for accepted Q001 commits.
+- PACK-04A authorizes no push; the state-sync commit remains local-only until the
+  user manually pushes it and exact remote readback passes.
 
 ## Recovery point
 
-Verified Project Ready baseline
-`main@9058c176c4c22c22c98bb18e4667610125b5f48c`. Do not reset, clean,
-force-push, amend, rebase, or rewrite history for recovery. Bootstrap recovery
-checkpoint remains `0f35b67b0d77e47976df842900020f84d655f667`.
-
-## Next recommended action
-
-Manually push the PACK-03B0R3C registry-reflection commit and verify its remote
-readback. Then the next safe gate is PACK-03B1. This state does not start PACK-03B1
-or provision a runtime lane.
+Preserve the accepted main history, PACK-03B2 evidence, runtime smoke branch, and
+local PACK-04A checkpoint. Do not reset, clean, force-push, amend, rebase, delete,
+or rewrite history for recovery.

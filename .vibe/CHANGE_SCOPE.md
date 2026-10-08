@@ -2,39 +2,61 @@
 
 ## Mode
 
-SYSTEM_MAINTENANCE — bounded Canonical Project creation
+`SYSTEM_MAINTENANCE`
 
 ## Active Project
 
 `Q001 / VIBE_AGY_QUALIFICATION_LAB`
 
-## Allowed Read
+## Active authorized phase
 
-- this project
-- exact canonical sources named by PACK-03B0
-- Project Registry and PACK-03P result
+`PACK-04A_DEPLOYMENT_AND_DURABLE_STATE_SYNC`
 
-## Allowed Write
+## Allowed read
 
-- exact project bootstrap files in this repository
-- PACK-03B0 commits and push on `main`
-- Q001 Project Registry row and PACK-03B0 evidence outside this repository
+- Q001 project governance and `.vibe` state.
+- Exact canonical ChatGPT deployment artifacts named by PACK-04A.
+- PACK-03B2 final disposition and verification evidence.
+- Execution Lane and Runtime Capability registries for readback only.
+- Protected roots for pre/post fingerprinting only.
 
-## Read-only
+## Allowed write
+
+- `.vibe/CURRENT_STATE.md`
+- `.vibe/CURRENT_PACK.md`
+- `.vibe/CHANGE_SCOPE.md`
+- `.vibe/HANDOVER.md`
+- `.vibe/VERIFICATION_LOG.md`
+- Exactly one normal local commit on `main` with the scoped `.vibe` delta.
+
+## Read-only / protected
 
 - `00_SYSTEM/VIBE_CODE/`
-- `80_PROJECTS/_PROJECT_TEMPLATE/`
-- `80_PROJECTS/CPGS_HUMAN_WORKSPACE/`
-- historical PACK00 through PACK03P evidence
+- `90_WORKSPACE/PROJECT_REGISTRY.md`
+- `90_WORKSPACE/EXECUTION_LANE_REGISTRY.md`
+- `90_WORKSPACE/RUNTIME_CAPABILITY_REGISTRY.md`
+- `D:\VIBE_AGENT_RUNTIME\ANTIGRAVITY\VIBE_AGY_QUALIFICATION_LAB`
+- `D:\LOCAL_WORKSPACE_CPGS`
+- published Agent Return bundle
+- ChatGPT and Antigravity platform/settings state
+
+PACK evidence under
+`90_WORKSPACE/SYSTEM_MAINTENANCE_TASKS/VIBE_UNIVERSAL_PROJECT_RUNTIME_PROVISIONING_01/`
+is written separately by the SYSTEM_MAINTENANCE orchestrator and is not part of
+the Q001 Git commit.
 
 ## Forbidden
 
-- secrets or credentials
-- destructive Git/history actions
-- runtime clone, `.agents/`, `.claude/`, runtime context, or runtime overlay
-- Antigravity settings, permissions, or project actions
-- unrelated refactor or repository mutation
+- push, fetch, pull, merge, reset, clean, rebase, amend, force, history rewrite,
+  or branch switch;
+- product/fixture/root-governance changes outside the five `.vibe` files;
+- runtime, Antigravity, settings, permission, CPGS, registry, bundle, or platform
+  mutation;
+- Resident Knowledge upload or Project Instructions deployment;
+- fresh-session/fresh-account validation;
+- SYSTEM KNOWN GOOD or PACK-04 completion claim.
 
-## Exceptions
+## Stop point
 
-None.
+Stop after the local PACK-04A commit and clean/ahead-one verification. Manual
+GitHub Desktop push and exact remote readback are required before PACK-04B opens.

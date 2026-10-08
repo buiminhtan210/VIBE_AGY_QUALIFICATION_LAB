@@ -61,3 +61,42 @@ Error; GitHub Desktop is the verified manual transport for the accepted commits.
 
 Next safe gate after the reflection commit is pushed and read back:
 `PACK-03B1 — Universal Antigravity host lane provisioning`.
+
+## 2026-10-08 — PACK-03B1 host provisioning and PACK-03B2 installed-runtime qualification
+
+| Check | Result | Evidence/Notes |
+|---|---|---|
+| PACK-03B1 host provisioning | PASS AFTER RECOVERY | Dedicated runtime root provisioned from exact Q001 base; manual project-specific runtime file setup = 0 |
+| Gate B1 discovery/canonical loading | PASS | 8 managed VIBE skills; canonical source loading; Git and Inspector first/repeat PASS |
+| Gate B2 bounded Browser QA | PASS | first/repeat PASS; 2/2 assertions each; screenshots generated; servers stopped; ports reusable; final Git CLEAN |
+| Initial Gate B3 | FAIL_PRESERVED | single-branch fetch compatibility defect exposed; mandatory stop retained |
+| PACK-03B2R1 recovery | PASS | Safe Runner 47/47; Lane Provisioner 61/61; historical failure unchanged |
+| Gate B3R2 write checkpoint | PASS | retained branch `agent/antigravity/pack03b2-write-smoke-20261008`; commit `52f9de7c0fd521bd26f766dedc9e3c3f5c042f68`; final main CLEAN |
+| Gate B4 return bridge | PASS | exact six-file payload plus valid publisher receipt; current-account connector readback and hashes PASS |
+| Final PACK-03B2 disposition | PASS_WITH_LIMITATIONS | lane ACTIVE_VERIFIED_WITH_LIMITATIONS; runtime QUALIFIED_WITH_LIMITATIONS |
+
+Retained limitations: backend model identity `UNVERIFIED`; terminal permissions
+remain `ASK_ON_WINDOWS_NO_CWD_BINDING`; repeat/read prompts may occur; no
+zero-prompt claim; ordinary branches share one working tree; mandatory failure
+requires STOP; native deletion is not newly qualified; push/merge/network require
+separate authority.
+
+## 2026-10-08 — PACK-04A deployment fingerprint and durable state sync
+
+| Check | Result | Evidence/Notes |
+|---|---|---|
+| Q001 baseline | PASS | `main@ea7c0930a4ae82499b554de7753ff07ac6385f9e`; origin/main exact; 0/0; clean; expected HTTPS origin |
+| PACK-03B2 closure | PASS | final disposition and B4C verification read completely |
+| Canonical ChatGPT deployment fingerprints | PASS | exact six-file byte/SHA-256 manifest recorded outside Q001 in PACK04 evidence |
+| Resident Router comparison | STALE_REPLACE_REQUIRED | supplied platform observation differs from canonical bytes/hash |
+| Resident Template Catalog comparison | STALE_REPLACE_REQUIRED | supplied platform observation differs from canonical bytes/hash |
+| Resident Fallback comparison | STALE_REPLACE_REQUIRED | supplied platform observation differs from canonical bytes/hash |
+| Project Instructions platform comparison | UNVERIFIED | manual verification deferred to PACK-04B |
+| Antigravity settings disposition | PASS | change required NO; ASK permission and narrow grants retained |
+| Durable `.vibe` delta | PASS | limited to CURRENT_STATE, CURRENT_PACK, CHANGE_SCOPE, HANDOVER, VERIFICATION_LOG |
+| Local state-sync commit | EXTERNAL EVIDENCE | exact full SHA recorded after commit in PACK04A_RESULT/VERIFICATION; intentionally not self-referenced here |
+| Fresh-session validation | NOT RUN | deferred to PACK-04C |
+| SYSTEM KNOWN GOOD | NOT ESTABLISHED | cannot be claimed before deployment and fresh-session validation |
+
+PACK-04A stop point: local commit only, no push. Manual GitHub Desktop push and
+exact remote readback are required before `PACK-04B_CHATGPT_DEPLOYMENT_SYNC`.
