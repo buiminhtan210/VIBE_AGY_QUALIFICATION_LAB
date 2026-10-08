@@ -10,13 +10,13 @@
 
 ## Active authorized phase
 
-`PACK-04A_DEPLOYMENT_AND_DURABLE_STATE_SYNC`
+`PACK-04B1_CHATGPT_PLATFORM_DEPLOYMENT_CLOSEOUT_AND_DURABLE_SYNC`
 
 ## Allowed read
 
 - Q001 project governance and `.vibe` state.
-- Exact canonical ChatGPT deployment artifacts named by PACK-04A.
-- PACK-03B2 final disposition and verification evidence.
+- PACK-04A, PACK-04B0, and orchestrator-supplied PACK-04B deployment evidence.
+- Exact current canonical ChatGPT deployment fingerprints.
 - Execution Lane and Runtime Capability registries for readback only.
 - Protected roots for pre/post fingerprinting only.
 
@@ -58,5 +58,6 @@ the Q001 Git commit.
 
 ## Stop point
 
-Stop after the local PACK-04A commit and clean/ahead-one verification. Manual
-GitHub Desktop push and exact remote readback are required before PACK-04B opens.
+Stop after the local PACK-04B documentary commit and clean/ahead-one verification.
+Manual GitHub Desktop push and exact remote readback are required before PACK-04C
+fresh-session validation opens.

@@ -15,8 +15,8 @@ Project Provisioning State: `PROJECT_READY`
 
 - Verified Project Ready baseline:
   `9058c176c4c22c22c98bb18e4667610125b5f48c`.
-- Current accepted canonical main before PACK-04A state sync:
-  `ea7c0930a4ae82499b554de7753ff07ac6385f9e`.
+- Accepted canonical main after PACK-04A remote verification:
+  `8b07ce3ba02de77fcd1098448e228d455ccd7a42`.
 - PACK-03B0: `ACCEPTED_AFTER_TRANSPORT_RECOVERY / HISTORICAL`.
 - PACK-03B1: `HOST_PROVISIONING_PASS_AFTER_RECOVERY / HISTORICAL`.
 - PACK-03B2: `CLOSED_PASS_WITH_LIMITATIONS`.
@@ -62,25 +62,31 @@ MANUAL_PROJECT_SPECIFIC_RUNTIME_FILE_SETUP = 0
 
 ## PACK-04 state
 
-- PACK-04A: canonical deployment/state sync; local documentary checkpoint pending
-  manual GitHub Desktop push and remote readback.
-- PACK-04B: `NOT_OPEN / PENDING_PACK04A_REMOTE_READBACK`.
+- PACK-04A: `COMPLETE_REMOTE_VERIFIED`.
+- PACK-04B0: `PASS_DEPLOYMENT_COMPATIBILITY_FIX`.
+- PACK-04B: `COMPLETE_PASS`.
+- Project Instructions: `COMPACT_CURRENT_DEPLOYMENT_PASS`.
+- Resident Knowledge: `3_OF_3_CANONICAL_MATCH`.
 - PACK-04C: `NOT_STARTED`.
 - ChatGPT fresh-session validation: `NOT_RUN`.
+- Fresh-account second-account validation: `NOT_RUN`.
 - SYSTEM KNOWN GOOD: `NOT_YET_ESTABLISHED`.
-- Next system-maintenance gate after PACK-04A remote readback:
-  `PACK-04B_CHATGPT_DEPLOYMENT_SYNC`.
+- Next safe gate after this documentary commit is manually pushed and read back:
+  `PACK-04C_FRESH_SESSION_VALIDATION`.
 
 ## Transport history
 
 - Codex Git push transport remains a known historical limitation:
   `FAILED_WITH_REMOTE_INTERNAL_SERVER_ERROR`.
 - GitHub Desktop is the verified manual transport used for accepted Q001 commits.
-- PACK-04A authorizes no push; the state-sync commit remains local-only until the
-  user manually pushes it and exact remote readback passes.
+- PACK-04A state-sync commit `8b07ce3ba02de77fcd1098448e228d455ccd7a42`
+  is remotely verified.
+- The PACK-04B documentary state commit remains local-only until the user manually
+  pushes it and exact remote readback passes.
 
 ## Recovery point
 
-Preserve the accepted main history, PACK-03B2 evidence, runtime smoke branch, and
-local PACK-04A checkpoint. Do not reset, clean, force-push, amend, rebase, delete,
-or rewrite history for recovery.
+Preserve the accepted main history, PACK-03B2 evidence and limitations, runtime
+smoke branch, PACK-04A remote checkpoint, PACK-04B0 compatibility evidence, and
+PACK-04B deployment evidence. Do not reset, clean, force-push, amend, rebase,
+delete, or rewrite history for recovery.

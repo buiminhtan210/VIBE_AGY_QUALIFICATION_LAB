@@ -100,3 +100,27 @@ separate authority.
 
 PACK-04A stop point: local commit only, no push. Manual GitHub Desktop push and
 exact remote readback are required before `PACK-04B_CHATGPT_DEPLOYMENT_SYNC`.
+
+## 2026-10-08 — PACK-04B platform deployment closeout and durable sync
+
+| Check | Result | Evidence/Notes |
+|---|---|---|
+| Q001 baseline | PASS | `main@8b07ce3ba02de77fcd1098448e228d455ccd7a42`; origin/main exact; 0/0; clean |
+| PACK-04A remote checkpoint | PASS | accepted state-sync commit is local/remote synchronized |
+| PACK-04B0 compatibility fix | PASS | compact instructions = 7642 UTF-8 bytes / 6835 code points / `e1c0de468524ef2c6c4ce01950e2118c87c705a8d37f42f0bf9f811475becf54` |
+| Project Instructions deployment | PASS | user-confirmed platform action plus Orchestrator active Project context verification |
+| Project Instructions content match | PASS_BY_ACTIVE_PROJECT_CONTEXT | platform SHA-256 is `UNAVAILABLE_NOT_EXPOSED`; no hash inferred |
+| Resident Router | MATCH | 10203 bytes / `93cf7cdeb785f60fd466c527ed43994b51504b82fb3ecb973f37364f71cb558b` |
+| Resident Template Catalog | MATCH | 3502 bytes / `53dd4cb28cf53a84749476648979f63f82a797b95cd197fda4dc450397aab338` |
+| Resident Fallback | MATCH | 14328 bytes / `1a4adca6030067f746b975f2eb497258524fa8166773f87afc40f12a6ad9571b` |
+| Resident contract | PASS | exactly 3 files; legacy FULL bundles not deployed |
+| Antigravity settings | UNCHANGED | change required NO; no action/permission mutation |
+| Durable `.vibe` delta | PASS | limited to CURRENT_STATE, CURRENT_PACK, CHANGE_SCOPE, HANDOVER, VERIFICATION_LOG |
+| Local documentary commit | EXTERNAL EVIDENCE | exact full SHA recorded after commit in PACK04B_RESULT/VERIFICATION; intentionally not self-referenced here |
+| Fresh-session validation | NOT RUN | deferred to PACK-04C |
+| Fresh-account second-account validation | NOT RUN | no account-2 PASS claimed |
+| SYSTEM KNOWN GOOD | NOT ESTABLISHED | requires PACK-04C validation |
+
+PACK-04B1 stop point: one local documentary commit only, no push. Manual GitHub
+Desktop push and exact remote readback are required before
+`PACK-04C_FRESH_SESSION_VALIDATION`.

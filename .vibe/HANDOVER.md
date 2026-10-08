@@ -2,9 +2,10 @@
 
 ## Outcome
 
-Q001 durable state now reflects the accepted PACK-03B2 installed Antigravity
-qualification. PACK-04A creates one local documentary checkpoint and stops before
-platform deployment or fresh-session validation.
+Q001 durable state now records PACK-04A remote verification, the PACK-04B0 compact
+deployment compatibility fix, and orchestrator-verified PACK-04B ChatGPT platform
+deployment. This Pack creates one local documentary checkpoint and stops before
+fresh-session validation.
 
 ## Current status
 
@@ -15,8 +16,9 @@ platform deployment or fresh-session validation.
 - PACK-03B0: `ACCEPTED_AFTER_TRANSPORT_RECOVERY / HISTORICAL`.
 - PACK-03B1: `HOST_PROVISIONING_PASS_AFTER_RECOVERY / HISTORICAL`.
 - PACK-03B2: `CLOSED_PASS_WITH_LIMITATIONS`.
-- PACK-04A: `COMPLETE_LOCAL_CHECKPOINT_PENDING_REMOTE_READBACK`.
-- PACK-04B: `NOT_OPEN / PENDING_PACK04A_REMOTE_READBACK`.
+- PACK-04A: `COMPLETE_REMOTE_VERIFIED`.
+- PACK-04B0: `PASS_DEPLOYMENT_COMPATIBILITY_FIX`.
+- PACK-04B: `COMPLETE_PASS`.
 - PACK-04C: `NOT_STARTED`.
 
 ## Qualified runtime state
@@ -48,10 +50,13 @@ Retained smoke branch/commit:
 
 - Canonical ChatGPT deployment fingerprints are recorded in
   `PACK04_CHATGPT_DEPLOYMENT_MANIFEST.md`.
-- All three observed current resident files are
-  `STALE_REPLACE_REQUIRED`.
-- Project Instructions platform fingerprint: `UNVERIFIED`.
-- No Resident Knowledge upload or platform settings mutation occurred.
+- Project Instructions: `COMPACT_CURRENT_DEPLOYMENT_PASS`.
+- Content match: `PASS_BY_ACTIVE_PROJECT_CONTEXT`.
+- Platform SHA-256: `UNAVAILABLE_NOT_EXPOSED`; no hash is invented.
+- Resident Knowledge: `3_OF_3_CANONICAL_MATCH` (Router, Catalog, Fallback).
+- Legacy `distribution/*_FULL.md` bundles: `NOT_DEPLOYED`.
+- No Codex platform mutation or Resident Knowledge upload occurred in this Pack;
+  the deployment action is supplied user evidence verified by the Orchestrator.
 - Antigravity settings change required: `NO`.
 
 ## Retained limitations
@@ -68,21 +73,21 @@ Retained smoke branch/commit:
 ## Verification state
 
 - Fresh-session validation: `NOT_RUN`.
-- Fresh-account validation: `NOT_RUN`.
+- Fresh-account second-account validation: `NOT_RUN`.
 - SYSTEM KNOWN GOOD: `NOT_YET_ESTABLISHED`.
-- Q001 state-sync commit SHA is recorded outside this commit in PACK-04A evidence;
-  no self-referential commit SHA is embedded here.
+- Q001 PACK-04B state-sync commit SHA is recorded outside this commit in PACK-04B
+  evidence; no self-referential commit SHA is embedded here.
 
 ## User action needed
 
-After PACK-04A final verification, use GitHub Desktop to push the exact local
-Q001 state-sync commit. Do not amend, rebase, or add other changes. Return to the
-VIBE CODE Orchestrator for exact remote/local tracking readback.
+After PACK-04B1 final verification, use GitHub Desktop to push the exact single
+outgoing Q001 documentary commit recorded in PACK-04B evidence. Do not amend,
+rebase, or add other changes. Return for exact remote/local tracking readback.
 
 ## Next safe gate
 
 Only after that push/readback passes:
-`PACK-04B_CHATGPT_DEPLOYMENT_SYNC`.
+`PACK-04C_FRESH_SESSION_VALIDATION`.
 
-STOP before PACK-04B, platform deployment, fresh-session validation, SYSTEM KNOWN
-GOOD, or CPGS migration.
+STOP before PACK-04C, fresh-session/fresh-account validation, SYSTEM KNOWN GOOD,
+or CPGS migration.

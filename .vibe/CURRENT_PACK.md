@@ -15,25 +15,35 @@ Project Registry: `REGISTERED`.
 | PACK-03B0 | `ACCEPTED_AFTER_TRANSPORT_RECOVERY / HISTORICAL` |
 | PACK-03B1 | `HOST_PROVISIONING_PASS_AFTER_RECOVERY / HISTORICAL` |
 | PACK-03B2 | `CLOSED_PASS_WITH_LIMITATIONS` |
-| PACK-04A | `COMPLETE_LOCAL_CHECKPOINT_PENDING_REMOTE_READBACK` |
-| PACK-04B | `NOT_OPEN / PENDING_PACK04A_REMOTE_READBACK` |
+| PACK-04A | `COMPLETE_REMOTE_VERIFIED` |
+| PACK-04B0 | `PASS_DEPLOYMENT_COMPATIBILITY_FIX` |
+| PACK-04B | `COMPLETE_PASS` |
 | PACK-04C | `NOT_STARTED` |
 
-PACK-04 remains open. PACK-04A does not complete PACK-04.
+PACK-04 remains open pending PACK-04C fresh-session validation. SYSTEM KNOWN GOOD
+is not yet established.
 
-## PACK-04A objective
+## PACK-04B closeout objective
 
-Reconcile Q001 durable `.vibe` state with accepted PACK-03B2, fingerprint the
-canonical ChatGPT deployment set, reconcile current resident observations, retain
-narrow Antigravity permission settings, and create one local documentary commit.
+Record orchestrator-verified ChatGPT platform deployment evidence, reconcile the
+deployment manifest, persist PACK-04B durable state, and stop with one local
+documentary commit pending manual push and remote readback.
 
-## PACK-04A scope
+## PACK-04B deployment disposition
 
-- Exact five `.vibe` state files only.
-- One normal local commit on `main`.
-- No push, platform deployment, Resident Knowledge upload, fresh-session test,
-  Antigravity action, settings change, runtime mutation, or protected registry
-  mutation.
+```text
+PROJECT_INSTRUCTIONS = COMPACT_CURRENT_DEPLOYMENT_PASS
+PROJECT_INSTRUCTIONS_CONTENT_MATCH = PASS_BY_ACTIVE_PROJECT_CONTEXT
+PROJECT_INSTRUCTIONS_PLATFORM_SHA256 = UNAVAILABLE_NOT_EXPOSED
+RESIDENT_KNOWLEDGE = 3_OF_3_CANONICAL_MATCH
+LEGACY_FULL_BUNDLES = NOT_DEPLOYED
+ANTIGRAVITY_SETTINGS_CHANGE = NO
+```
+
+PACK-04B0 compatibility fix is `PASS`. This closeout writes only the exact five
+authorized `.vibe` files and one normal local commit. No platform upload/action,
+fresh-session test, Antigravity/settings/runtime action, protected registry
+mutation, or push occurs in this state-sync Pack.
 
 ## Accepted PACK-03B2 outcome
 
@@ -76,7 +86,8 @@ Retained smoke branch/commit:
 ## Verification and stop point
 
 - Fresh-session PASS: `NOT_CLAIMED / NOT_RUN`.
+- Fresh-account second-account PASS: `NOT_CLAIMED / NOT_RUN`.
 - SYSTEM KNOWN GOOD: `NOT_CLAIMED / NOT_YET_ESTABLISHED`.
-- Next system-maintenance gate after manual push and exact remote readback:
-  `PACK-04B_CHATGPT_DEPLOYMENT_SYNC`.
-- STOP before PACK-04B, any platform deployment, or fresh-session validation.
+- Next safe gate after this local commit is manually pushed and exact remote
+  readback passes: `PACK-04C_FRESH_SESSION_VALIDATION`.
+- STOP before PACK-04C or any fresh-session/fresh-account validation.
