@@ -4,14 +4,13 @@
 
 SYSTEM_MAINTENANCE
 Q001 / VIBE_AGY_QUALIFICATION_LAB
-PACK-04C_FRESH_SESSION_VALIDATION_AND_FINAL_CLOSEOUT
-User brief SHA-256: fa5eb6824e4b56f4bbd3d4e966bb2b651bf5e64d3fd00661e5abd084268859b8
+PACK04_POST_PUSH_REMOTE_CLOSURE_RECONCILIATION
+User brief SHA-256: c92a8b2cb4bf11e63c9bb0618bebf6b830875d226206da88942250fe755e5ea7
 PACK-04 accepted current-account scope CLOSED; active product Pack NONE.
 
 ## Allowed read
 
-Exact PACK-04 evidence/control, Q001 governance/.vibe/Git, current connector
-identity, live remote-main readback, multi-account HOLD/current activation,
+Exact PACK-04 evidence/control, Q001 governance/.vibe/Git, live remote-main readback, multi-account HOLD/current activation,
 and protected-boundary fingerprints. No bulk Knowledge context loading.
 
 ## Allowed write
@@ -23,16 +22,16 @@ Q001 only:
 - .vibe/HANDOVER.md
 - .vibe/VERIFICATION_LOG.md
 - Exactly one normal local commit on main:
-  chore: close PACK04 fresh-session validation
+  chore: persist PACK04 remote closure
 
 Exact initiative directory:
 90_WORKSPACE/SYSTEM_MAINTENANCE_TASKS/VIBE_UNIVERSAL_PROJECT_RUNTIME_PROVISIONING_01/
-- PACK04C_FRESH_SESSION_EVIDENCE.md
-- PACK04C_RESULT.md
-- PACK04C_VERIFICATION.json
-- PACK04_FINAL_DISPOSITION.md
-- 10_PACK04_DEPLOYMENT_SYNC_AND_FRESH_SESSION_VALIDATION.md: append only.
-- PACK04_CHATGPT_DEPLOYMENT_MANIFEST.md: append only.
+- PACK04_REMOTE_READBACK_RESULT.md
+- PACK04_REMOTE_READBACK_VERIFICATION.json
+- PACK04_FINAL_DISPOSITION.md: stale current transport only.
+- PACK04_CHATGPT_DEPLOYMENT_MANIFEST.md: stale current transport only.
+Historical PACK04C_RESULT.md, PACK04C_VERIFICATION.json and all other evidence
+remain read-only; qualification is not reopened or rerun.
 
 90_WORKSPACE/EXECUTION_LANE_REGISTRY.md:
 only Q001 / Google Antigravity current active qualified lane section.
@@ -48,7 +47,8 @@ Knowledge are read-only. Another registry contradiction requires STOP.
 No push/fetch/pull/merge/reset/clean/rebase/amend/force/history rewrite/branch switch.
 No runtime/settings/permission/product/fixture/platform/Knowledge mutation.
 No second-account PASS, automatic multi-account resume or CPGS migration.
-No future/self-referential commit SHA inside Q001 state.
+No self-referential state-propagation commit SHA inside Q001 state.
+The already remote-verified qualification checkpoint is d014a9a137b10a5ce6e86294a72b7ea3d9c46c2b.
 
 ## Final state and stop point
 
@@ -58,6 +58,12 @@ SECOND_ACCOUNT_CLEAN_ROOM = HOLD_BY_USER.
 MULTI_ACCOUNT_READBACK = DEFERRED_UNTIL_SECOND_ACCOUNT_AVAILABLE.
 CPGS_MIGRATION = NOT_STARTED_REQUIRES_SEPARATE_AUTHORIZATION.
 
-Stop after one local Q001 commit and CLEAN / ahead-one verification.
-Manual final push and exact remote/local readback remain required.
-No further mutation is authorized after closeout verification.
+FINAL_QUALIFICATION_CHECKPOINT_REMOTE_READBACK = PASS.
+INITIATIVE = CLOSED_COMPLETE_WITH_LIMITATIONS.
+SAFE_TO_DECLARE_INITIATIVE_CLOSED = YES.
+NEXT_SAFE_ACTION = NONE_WITHIN_THIS_INITIATIVE.
+STATE_COMMIT_IS_QUALIFICATION_CHECKPOINT = NO.
+Stop after exactly one local state metadata commit and CLEAN / ahead-one
+verification. origin/main stays at the remote-verified qualification checkpoint.
+A later metadata push only transports state; it is not a closure/qualification
+prerequisite. No push or further mutation is authorized here.

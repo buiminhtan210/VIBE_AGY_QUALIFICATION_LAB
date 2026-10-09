@@ -72,16 +72,27 @@ MANUAL_PROJECT_SPECIFIC_RUNTIME_FILE_SETUP = 0
 - Current-account fresh-session validation: PASS.
 - Filesystem resume without prior chat: PASS.
 - SYSTEM KNOWN GOOD: ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT.
-- Initiative disposition: COMPLETE_WITH_LIMITATIONS (verified current-account scope).
+- Initiative disposition: CLOSED_COMPLETE_WITH_LIMITATIONS (verified current-account scope).
 - Second-account validation: DEFERRED_UNTIL_SECOND_ACCOUNT_AVAILABLE.
 - Second-account clean-room: HOLD_BY_USER; execution NOT_RUN.
 - Multi-account readback: DEFERRED_UNTIL_SECOND_ACCOUNT_AVAILABLE.
 - CPGS migration: NOT_STARTED_REQUIRES_SEPARATE_AUTHORIZATION.
 - PACK-04B remote/local checkpoint: 0efdd91c203fc3d47ac33d76d22d42c061a5c0b7.
-- Final PACK-04C local SHA is recorded outside this commit in PACK04C_RESULT.md
-  and PACK04C_VERIFICATION.json; no future/self-referential SHA is embedded.
-- Next safe gate: final manual Q001 push and exact remote/local readback.
-- SAFE_TO_DECLARE_INITIATIVE_CLOSED = NO_PENDING_REMOTE_READBACK.
+- Final qualification checkpoint is independently remote-verified at
+  d014a9a137b10a5ce6e86294a72b7ea3d9c46c2b.
+- Next safe action: NONE_WITHIN_THIS_INITIATIVE.
+- SAFE_TO_DECLARE_INITIATIVE_CLOSED = YES.
+
+```text
+FINAL_QUALIFICATION_CHECKPOINT = d014a9a137b10a5ce6e86294a72b7ea3d9c46c2b
+FINAL_QUALIFICATION_CHECKPOINT_REMOTE_READBACK = PASS
+FINAL_Q001_DOCUMENTARY_TRANSPORT = REMOTE_VERIFIED
+INITIATIVE = CLOSED_COMPLETE_WITH_LIMITATIONS
+SAFE_TO_DECLARE_INITIATIVE_CLOSED = YES
+NEXT_SAFE_ACTION = NONE_WITHIN_THIS_INITIATIVE
+STATE_COMMIT_IS_QUALIFICATION_CHECKPOINT = NO
+```
+
 - STOP before CPGS migration; no automatic second-account resume.
 
 ## Transport history
@@ -93,8 +104,11 @@ MANUAL_PROJECT_SPECIFIC_RUNTIME_FILE_SETUP = 0
   is remotely verified.
 - The PACK-04B documentary state commit is now independently remote-verified;
   its local-only creation snapshot remains historical evidence.
-- The final PACK-04C documentary commit remains local-only pending manual push
-  and exact remote readback. Remote initiative closure remains pending.
+- The final PACK-04C documentary checkpoint d014a9a137b10a5ce6e86294a72b7ea3d9c46c2b
+  is independently remote-verified. Remote initiative closure = PASS.
+- The authorized follow-up local commit only propagates this closure metadata;
+  it is not a qualification checkpoint. Its exact SHA/readback is recorded in
+  PACK04_REMOTE_READBACK_RESULT.md outside Q001. No push is performed.
 
 ## Recovery point
 

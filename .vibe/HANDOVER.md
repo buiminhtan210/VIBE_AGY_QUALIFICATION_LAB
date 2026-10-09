@@ -4,8 +4,9 @@
 
 PACK-04 current-account technical closeout is complete with limitations.
 PACK-04C fresh-session bootstrap PASS; SYSTEM KNOWN GOOD =
-ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT. Final Q001 documentary commit is
-local-only; stop for manual push/readback before remote initiative closure.
+ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT. Final Q001 qualification checkpoint
+d014a9a137b10a5ce6e86294a72b7ea3d9c46c2b is remote-verified;
+initiative closure = PASS. This follow-up commit propagates state metadata only.
 
 ## Current status
 
@@ -21,7 +22,7 @@ local-only; stop for manual push/readback before remote initiative closure.
 - PACK-04B: `COMPLETE_PASS`.
 - PACK-04C: CLOSED_PASS_WITH_LIMITATIONS.
 - PACK-04: CLOSED.
-- Initiative: COMPLETE_WITH_LIMITATIONS within verified current-account scope.
+- Initiative: CLOSED_COMPLETE_WITH_LIMITATIONS within verified current-account scope.
 - CPGS migration: NOT_STARTED_REQUIRES_SEPARATE_AUTHORIZATION.
 
 ## Qualified runtime state
@@ -83,25 +84,32 @@ Retained smoke branch/commit:
 - HOLD is not a current-account blocker; no second-account PASS.
 - SYSTEM_KNOWN_GOOD = ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT.
 - PACK-04B remote/local checkpoint: 0efdd91c203fc3d47ac33d76d22d42c061a5c0b7.
-- Final PACK-04C local SHA is recorded outside this commit in PACK04C_RESULT.md
-  and PACK04C_VERIFICATION.json; no self-reference is embedded.
+- Final qualification checkpoint: d014a9a137b10a5ce6e86294a72b7ea3d9c46c2b;
+  independent remote readback PASS. Historical pre-push evidence is preserved.
 - Provenance: user-transferred fresh-session report plus independent current
   connector/filesystem/Git reconciliation. Accepted deployment/runtime evidence
   is carried forward; no live platform/settings/runtime retest or backend proof.
 - Platform SHA/transcript metadata: UNAVAILABLE_NOT_EXPOSED.
 
-## User action needed
+## State metadata transport
 
-Use GitHub Desktop to push only the exact one outgoing final Q001 commit in
-PACK04C_RESULT.md after final verification. Require main, CLEAN, ahead exactly
-one, and origin/main 0efdd91c203fc3d47ac33d76d22d42c061a5c0b7.
-No amend/rebase/extra commit. PACK04C_RESULT.md provides the exact ten-field
-Operator Action Card. Return for live remote/local/tracking exact readback.
+The authorized follow-up commit only persists already-established remote closure.
+Its exact SHA and CLEAN / ahead-one readback are recorded outside Q001 in
+PACK04_REMOTE_READBACK_RESULT.md. No push occurs in this task. A later metadata
+push does not establish a new qualification checkpoint or reopen PACK-04.
 
 ## Next safe gate
 
-Final manual Q001 push and exact remote/local readback only.
-SAFE_TO_DECLARE_INITIATIVE_CLOSED = NO_PENDING_REMOTE_READBACK.
+```text
+FINAL_QUALIFICATION_CHECKPOINT = d014a9a137b10a5ce6e86294a72b7ea3d9c46c2b
+FINAL_QUALIFICATION_CHECKPOINT_REMOTE_READBACK = PASS
+FINAL_Q001_DOCUMENTARY_TRANSPORT = REMOTE_VERIFIED
+INITIATIVE = CLOSED_COMPLETE_WITH_LIMITATIONS
+SAFE_TO_DECLARE_INITIATIVE_CLOSED = YES
+NEXT_SAFE_ACTION = NONE_WITHIN_THIS_INITIATIVE
+STATE_COMMIT_IS_QUALIFICATION_CHECKPOINT = NO
+```
+
 STOP before CPGS migration or any product/runtime action.
 Second-account work resumes only when available and explicitly authorized;
 read exact SYS-RB03E MULTI_ACCOUNT_HOLD.md and preserved assignment first.

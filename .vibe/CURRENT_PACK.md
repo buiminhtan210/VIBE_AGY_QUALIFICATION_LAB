@@ -22,8 +22,8 @@ Project Registry: `REGISTERED`.
 
 PACK-04 is CLOSED within verified current-account scope.
 SYSTEM_KNOWN_GOOD = ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT.
-INITIATIVE_DISPOSITION = COMPLETE_WITH_LIMITATIONS; remote documentary readback
-remains pending. CPGS_MIGRATION = NOT_STARTED_REQUIRES_SEPARATE_AUTHORIZATION.
+INITIATIVE_DISPOSITION = CLOSED_COMPLETE_WITH_LIMITATIONS; remote documentary
+readback PASS at d014a9a137b10a5ce6e86294a72b7ea3d9c46c2b. CPGS_MIGRATION = NOT_STARTED_REQUIRES_SEPARATE_AUTHORIZATION.
 
 ## PACK-04C accepted closeout
 
@@ -32,8 +32,19 @@ FILESYSTEM_RESUME_WITHOUT_PRIOR_CHAT = PASS.
 SECOND_ACCOUNT_VALIDATION = DEFERRED_UNTIL_SECOND_ACCOUNT_AVAILABLE.
 SECOND_ACCOUNT_CLEAN_ROOM = HOLD_BY_USER; execution NOT_RUN.
 MULTI_ACCOUNT_READBACK = DEFERRED_UNTIL_SECOND_ACCOUNT_AVAILABLE.
-No runtime capability or permission promotion. Exactly one final local Q001
-commit; full SHA recorded externally. STOP for manual final push/readback.
+No runtime capability or permission promotion. The final qualification
+checkpoint is remote-verified; this follow-up commit only propagates state.
+
+```text
+FINAL_QUALIFICATION_CHECKPOINT = d014a9a137b10a5ce6e86294a72b7ea3d9c46c2b
+FINAL_QUALIFICATION_CHECKPOINT_REMOTE_READBACK = PASS
+FINAL_Q001_DOCUMENTARY_TRANSPORT = REMOTE_VERIFIED
+INITIATIVE = CLOSED_COMPLETE_WITH_LIMITATIONS
+SAFE_TO_DECLARE_INITIATIVE_CLOSED = YES
+NEXT_SAFE_ACTION = NONE_WITHIN_THIS_INITIATIVE
+STATE_COMMIT_IS_QUALIFICATION_CHECKPOINT = NO
+```
+
 
 ## Historical PACK-04B closeout objective
 
@@ -102,6 +113,7 @@ Retained smoke branch/commit:
 - Second-account: NOT_RUN / HOLD_BY_USER; no multi-account PASS.
 - SYSTEM_KNOWN_GOOD = ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT.
 - PACK-04B remote checkpoint: 0efdd91c203fc3d47ac33d76d22d42c061a5c0b7.
-- Final PACK-04C commit is local-only; SHA is recorded outside this commit.
-- STOP for final manual push/readback, before CPGS migration.
+- Final PACK-04C checkpoint: d014a9a137b10a5ce6e86294a72b7ea3d9c46c2b; remote readback PASS.
+- STOP before CPGS migration; separate authorization required.
+- State metadata commit only; no qualification rerun and no push.
 - No further product Pack, second-account run or runtime action is opened.

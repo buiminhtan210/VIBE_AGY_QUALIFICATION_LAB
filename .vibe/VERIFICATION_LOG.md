@@ -148,3 +148,32 @@ Desktop push and exact remote readback are required before
 Historical verification bytes above remain unchanged. Stop after one local
 documentary commit, no push; manual final push/readback required before remote
 initiative closure. No second-account, runtime or CPGS work opens.
+
+## 2026-10-09 — PACK-04 post-push remote closure reconciliation
+
+Historical PACK-04C rows and pre-push stop point above are retained as dated facts.
+The current transport/state disposition is superseded by this readback:
+
+| Check | Result | Evidence |
+|---|---|---|
+| Final qualification checkpoint | PASS | Live GitHub main/local HEAD/origin/main d014a9a137b10a5ce6e86294a72b7ea3d9c46c2b; main; CLEAN; 0/0 before reconciliation |
+| PACK-04 / PACK-04C | CLOSED / CLOSED_PASS_WITH_LIMITATIONS | Qualification accepted previously; not rerun |
+| SYSTEM KNOWN GOOD | ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT | Verified current-account scope; limits unchanged |
+| Remote initiative closure | PASS | CLOSED_COMPLETE_WITH_LIMITATIONS; SAFE_TO_DECLARE_INITIATIVE_CLOSED = YES |
+| State propagation | METADATA ONLY | One normal local commit: chore: persist PACK04 remote closure; not a qualification checkpoint; exact SHA/final readback recorded outside Q001 |
+| Second account | DEFERRED_UNTIL_SECOND_ACCOUNT_AVAILABLE | HOLD_BY_USER / NOT_RUN |
+| CPGS migration | NOT_STARTED_REQUIRES_SEPARATE_AUTHORIZATION | No migration, runtime, settings, platform or product action |
+
+```text
+FINAL_QUALIFICATION_CHECKPOINT = d014a9a137b10a5ce6e86294a72b7ea3d9c46c2b
+FINAL_QUALIFICATION_CHECKPOINT_REMOTE_READBACK = PASS
+FINAL_Q001_DOCUMENTARY_TRANSPORT = REMOTE_VERIFIED
+INITIATIVE = CLOSED_COMPLETE_WITH_LIMITATIONS
+SAFE_TO_DECLARE_INITIATIVE_CLOSED = YES
+NEXT_SAFE_ACTION = NONE_WITHIN_THIS_INITIATIVE
+STATE_COMMIT_IS_QUALIFICATION_CHECKPOINT = NO
+```
+
+Evidence: PACK04_REMOTE_READBACK_RESULT.md / PACK04_REMOTE_READBACK_VERIFICATION.json
+in the canonical initiative directory, outside Q001. Stop after local metadata
+commit and CLEAN / ahead-one readback. No push; no next qualification/product Pack.
