@@ -2,10 +2,10 @@
 
 ## Outcome
 
-Q001 durable state now records PACK-04A remote verification, the PACK-04B0 compact
-deployment compatibility fix, and orchestrator-verified PACK-04B ChatGPT platform
-deployment. This Pack creates one local documentary checkpoint and stops before
-fresh-session validation.
+PACK-04 current-account technical closeout is complete with limitations.
+PACK-04C fresh-session bootstrap PASS; SYSTEM KNOWN GOOD =
+ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT. Final Q001 documentary commit is
+local-only; stop for manual push/readback before remote initiative closure.
 
 ## Current status
 
@@ -19,7 +19,10 @@ fresh-session validation.
 - PACK-04A: `COMPLETE_REMOTE_VERIFIED`.
 - PACK-04B0: `PASS_DEPLOYMENT_COMPATIBILITY_FIX`.
 - PACK-04B: `COMPLETE_PASS`.
-- PACK-04C: `NOT_STARTED`.
+- PACK-04C: CLOSED_PASS_WITH_LIMITATIONS.
+- PACK-04: CLOSED.
+- Initiative: COMPLETE_WITH_LIMITATIONS within verified current-account scope.
+- CPGS migration: NOT_STARTED_REQUIRES_SEPARATE_AUTHORIZATION.
 
 ## Qualified runtime state
 
@@ -72,22 +75,33 @@ Retained smoke branch/commit:
 
 ## Verification state
 
-- Fresh-session validation: `NOT_RUN`.
-- Fresh-account second-account validation: `NOT_RUN`.
-- SYSTEM KNOWN GOOD: `NOT_YET_ESTABLISHED`.
-- Q001 PACK-04B state-sync commit SHA is recorded outside this commit in PACK-04B
-  evidence; no self-referential commit SHA is embedded here.
+- Current-account fresh-session: PASS.
+- Filesystem resume without prior chat: PASS.
+- Second-account validation / multi-account readback:
+  DEFERRED_UNTIL_SECOND_ACCOUNT_AVAILABLE.
+- Second-account clean-room: HOLD_BY_USER; execution NOT_RUN.
+- HOLD is not a current-account blocker; no second-account PASS.
+- SYSTEM_KNOWN_GOOD = ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT.
+- PACK-04B remote/local checkpoint: 0efdd91c203fc3d47ac33d76d22d42c061a5c0b7.
+- Final PACK-04C local SHA is recorded outside this commit in PACK04C_RESULT.md
+  and PACK04C_VERIFICATION.json; no self-reference is embedded.
+- Provenance: user-transferred fresh-session report plus independent current
+  connector/filesystem/Git reconciliation. Accepted deployment/runtime evidence
+  is carried forward; no live platform/settings/runtime retest or backend proof.
+- Platform SHA/transcript metadata: UNAVAILABLE_NOT_EXPOSED.
 
 ## User action needed
 
-After PACK-04B1 final verification, use GitHub Desktop to push the exact single
-outgoing Q001 documentary commit recorded in PACK-04B evidence. Do not amend,
-rebase, or add other changes. Return for exact remote/local tracking readback.
+Use GitHub Desktop to push only the exact one outgoing final Q001 commit in
+PACK04C_RESULT.md after final verification. Require main, CLEAN, ahead exactly
+one, and origin/main 0efdd91c203fc3d47ac33d76d22d42c061a5c0b7.
+No amend/rebase/extra commit. PACK04C_RESULT.md provides the exact ten-field
+Operator Action Card. Return for live remote/local/tracking exact readback.
 
 ## Next safe gate
 
-Only after that push/readback passes:
-`PACK-04C_FRESH_SESSION_VALIDATION`.
-
-STOP before PACK-04C, fresh-session/fresh-account validation, SYSTEM KNOWN GOOD,
-or CPGS migration.
+Final manual Q001 push and exact remote/local readback only.
+SAFE_TO_DECLARE_INITIATIVE_CLOSED = NO_PENDING_REMOTE_READBACK.
+STOP before CPGS migration or any product/runtime action.
+Second-account work resumes only when available and explicitly authorized;
+read exact SYS-RB03E MULTI_ACCOUNT_HOLD.md and preserved assignment first.

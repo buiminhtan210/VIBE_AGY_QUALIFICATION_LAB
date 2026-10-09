@@ -18,12 +18,24 @@ Project Registry: `REGISTERED`.
 | PACK-04A | `COMPLETE_REMOTE_VERIFIED` |
 | PACK-04B0 | `PASS_DEPLOYMENT_COMPATIBILITY_FIX` |
 | PACK-04B | `COMPLETE_PASS` |
-| PACK-04C | `NOT_STARTED` |
+| PACK-04C | `CLOSED_PASS_WITH_LIMITATIONS` |
 
-PACK-04 remains open pending PACK-04C fresh-session validation. SYSTEM KNOWN GOOD
-is not yet established.
+PACK-04 is CLOSED within verified current-account scope.
+SYSTEM_KNOWN_GOOD = ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT.
+INITIATIVE_DISPOSITION = COMPLETE_WITH_LIMITATIONS; remote documentary readback
+remains pending. CPGS_MIGRATION = NOT_STARTED_REQUIRES_SEPARATE_AUTHORIZATION.
 
-## PACK-04B closeout objective
+## PACK-04C accepted closeout
+
+CURRENT_ACCOUNT_FRESH_SESSION = PASS.
+FILESYSTEM_RESUME_WITHOUT_PRIOR_CHAT = PASS.
+SECOND_ACCOUNT_VALIDATION = DEFERRED_UNTIL_SECOND_ACCOUNT_AVAILABLE.
+SECOND_ACCOUNT_CLEAN_ROOM = HOLD_BY_USER; execution NOT_RUN.
+MULTI_ACCOUNT_READBACK = DEFERRED_UNTIL_SECOND_ACCOUNT_AVAILABLE.
+No runtime capability or permission promotion. Exactly one final local Q001
+commit; full SHA recorded externally. STOP for manual final push/readback.
+
+## Historical PACK-04B closeout objective
 
 Record orchestrator-verified ChatGPT platform deployment evidence, reconcile the
 deployment manifest, persist PACK-04B durable state, and stop with one local
@@ -83,11 +95,13 @@ Retained smoke branch/commit:
 - Native file deletion is not newly qualified.
 - Push, merge, and external network require separate authority.
 
-## Verification and stop point
+## Current verification and stop point
 
-- Fresh-session PASS: `NOT_CLAIMED / NOT_RUN`.
-- Fresh-account second-account PASS: `NOT_CLAIMED / NOT_RUN`.
-- SYSTEM KNOWN GOOD: `NOT_CLAIMED / NOT_YET_ESTABLISHED`.
-- Next safe gate after this local commit is manually pushed and exact remote
-  readback passes: `PACK-04C_FRESH_SESSION_VALIDATION`.
-- STOP before PACK-04C or any fresh-session/fresh-account validation.
+- Current-account fresh-session: PASS from transferred clean-room output plus
+  current independent connector/filesystem/Git reconciliation.
+- Second-account: NOT_RUN / HOLD_BY_USER; no multi-account PASS.
+- SYSTEM_KNOWN_GOOD = ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT.
+- PACK-04B remote checkpoint: 0efdd91c203fc3d47ac33d76d22d42c061a5c0b7.
+- Final PACK-04C commit is local-only; SHA is recorded outside this commit.
+- STOP for final manual push/readback, before CPGS migration.
+- No further product Pack, second-account run or runtime action is opened.

@@ -124,3 +124,27 @@ exact remote readback are required before `PACK-04B_CHATGPT_DEPLOYMENT_SYNC`.
 PACK-04B1 stop point: one local documentary commit only, no push. Manual GitHub
 Desktop push and exact remote readback are required before
 `PACK-04C_FRESH_SESSION_VALIDATION`.
+
+## 2026-10-09 — PACK-04C current-account fresh-session final closeout
+
+| Check | Result | Evidence |
+|---|---|---|
+| PACK-04B remote checkpoint | PASS | Live GitHub main/local HEAD/origin/main 0efdd91c203fc3d47ac33d76d22d42c061a5c0b7; main, CLEAN, 0/0 |
+| Fresh-session report | PASS | Exact user-transferred output and provenance preserved in PACK04C_FRESH_SESSION_EVIDENCE.md |
+| Connector identity | PASS | VIBE_CODE_WORKSPACE_BASELINE / bc2c3c47ba41 / workspace:/ observed now |
+| Router / Bootstrap / Q001 state | PASS | Local-First filesystem bootstrap; no prior-chat state authority or user history reconstruction |
+| Fresh-session safety | PASS | Read-only, no bulk Knowledge context loading, no mutation |
+| Deployment applicability | PASS | Accepted PACK-04B platform evidence carried forward; current canonical hashes match; platform hash not exposed |
+| Second-account | NOT RUN | DEFERRED_UNTIL_SECOND_ACCOUNT_AVAILABLE / HOLD_BY_USER; not current-account failure |
+| Runtime qualifications | PRESERVED | PACK-03B2 limits unchanged; no new capability, permission or backend-model proof |
+| SYSTEM KNOWN GOOD | ESTABLISHED WITH LIMITATIONS | ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT |
+| PACK-04 / initiative | CLOSED / COMPLETE_WITH_LIMITATIONS | Technical/current-account acceptance; remote documentary durability pending |
+| Q001 lane registry | RECONCILED | Only current Q001 section; all other bytes preserved |
+| Q001 delta | PASS | Only five authorized .vibe files; no future/self-referential SHA |
+| Final local commit | EXTERNAL EVIDENCE | Actual SHA/CLEAN/ahead-one recorded after commit in System PACK04C evidence |
+| Protected boundaries | EXTERNAL EVIDENCE | Pre/post inventories/hashes in PACK04C_VERIFICATION.json |
+| CPGS migration | NOT STARTED | Separate authorization required |
+
+Historical verification bytes above remain unchanged. Stop after one local
+documentary commit, no push; manual final push/readback required before remote
+initiative closure. No second-account, runtime or CPGS work opens.

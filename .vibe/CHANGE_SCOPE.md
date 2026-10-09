@@ -1,63 +1,63 @@
 # Change Scope
 
-## Mode
+## Mode and authority
 
-`SYSTEM_MAINTENANCE`
-
-## Active Project
-
-`Q001 / VIBE_AGY_QUALIFICATION_LAB`
-
-## Active authorized phase
-
-`PACK-04B1_CHATGPT_PLATFORM_DEPLOYMENT_CLOSEOUT_AND_DURABLE_SYNC`
+SYSTEM_MAINTENANCE
+Q001 / VIBE_AGY_QUALIFICATION_LAB
+PACK-04C_FRESH_SESSION_VALIDATION_AND_FINAL_CLOSEOUT
+User brief SHA-256: fa5eb6824e4b56f4bbd3d4e966bb2b651bf5e64d3fd00661e5abd084268859b8
+PACK-04 accepted current-account scope CLOSED; active product Pack NONE.
 
 ## Allowed read
 
-- Q001 project governance and `.vibe` state.
-- PACK-04A, PACK-04B0, and orchestrator-supplied PACK-04B deployment evidence.
-- Exact current canonical ChatGPT deployment fingerprints.
-- Execution Lane and Runtime Capability registries for readback only.
-- Protected roots for pre/post fingerprinting only.
+Exact PACK-04 evidence/control, Q001 governance/.vibe/Git, current connector
+identity, live remote-main readback, multi-account HOLD/current activation,
+and protected-boundary fingerprints. No bulk Knowledge context loading.
 
 ## Allowed write
 
-- `.vibe/CURRENT_STATE.md`
-- `.vibe/CURRENT_PACK.md`
-- `.vibe/CHANGE_SCOPE.md`
-- `.vibe/HANDOVER.md`
-- `.vibe/VERIFICATION_LOG.md`
-- Exactly one normal local commit on `main` with the scoped `.vibe` delta.
+Q001 only:
+- .vibe/CURRENT_STATE.md
+- .vibe/CURRENT_PACK.md
+- .vibe/CHANGE_SCOPE.md
+- .vibe/HANDOVER.md
+- .vibe/VERIFICATION_LOG.md
+- Exactly one normal local commit on main:
+  chore: close PACK04 fresh-session validation
 
-## Read-only / protected
+Exact initiative directory:
+90_WORKSPACE/SYSTEM_MAINTENANCE_TASKS/VIBE_UNIVERSAL_PROJECT_RUNTIME_PROVISIONING_01/
+- PACK04C_FRESH_SESSION_EVIDENCE.md
+- PACK04C_RESULT.md
+- PACK04C_VERIFICATION.json
+- PACK04_FINAL_DISPOSITION.md
+- 10_PACK04_DEPLOYMENT_SYNC_AND_FRESH_SESSION_VALIDATION.md: append only.
+- PACK04_CHATGPT_DEPLOYMENT_MANIFEST.md: append only.
 
-- `00_SYSTEM/VIBE_CODE/`
-- `90_WORKSPACE/PROJECT_REGISTRY.md`
-- `90_WORKSPACE/EXECUTION_LANE_REGISTRY.md`
-- `90_WORKSPACE/RUNTIME_CAPABILITY_REGISTRY.md`
-- `D:\VIBE_AGENT_RUNTIME\ANTIGRAVITY\VIBE_AGY_QUALIFICATION_LAB`
-- `D:\LOCAL_WORKSPACE_CPGS`
-- published Agent Return bundle
-- ChatGPT and Antigravity platform/settings state
+90_WORKSPACE/EXECUTION_LANE_REGISTRY.md:
+only Q001 / Google Antigravity current active qualified lane section.
+Preserve all other bytes, P001 facts and historical sections.
 
-PACK evidence under
-`90_WORKSPACE/SYSTEM_MAINTENANCE_TASKS/VIBE_UNIVERSAL_PROJECT_RUNTIME_PROVISIONING_01/`
-is written separately by the SYSTEM_MAINTENANCE orchestrator and is not part of
-the Q001 Git commit.
+## Protected and forbidden
 
-## Forbidden
+Canonical System/deployment sources, PROJECT_REGISTRY, RUNTIME_CAPABILITY_REGISTRY,
+multi-account HOLD/assignment, Agent Runtime, Antigravity settings/permissions,
+CPGS_HUMAN_WORKSPACE, published Return bundles, ChatGPT platform and resident
+Knowledge are read-only. Another registry contradiction requires STOP.
 
-- push, fetch, pull, merge, reset, clean, rebase, amend, force, history rewrite,
-  or branch switch;
-- product/fixture/root-governance changes outside the five `.vibe` files;
-- runtime, Antigravity, settings, permission, CPGS, registry, bundle, or platform
-  mutation;
-- Resident Knowledge upload or Project Instructions deployment;
-- fresh-session/fresh-account validation;
-- SYSTEM KNOWN GOOD or PACK-04 completion claim.
+No push/fetch/pull/merge/reset/clean/rebase/amend/force/history rewrite/branch switch.
+No runtime/settings/permission/product/fixture/platform/Knowledge mutation.
+No second-account PASS, automatic multi-account resume or CPGS migration.
+No future/self-referential commit SHA inside Q001 state.
 
-## Stop point
+## Final state and stop point
 
-Stop after the local PACK-04B documentary commit and clean/ahead-one verification.
-Manual GitHub Desktop push and exact remote readback are required before PACK-04C
-fresh-session validation opens.
+PACK-04C = CLOSED_PASS_WITH_LIMITATIONS; PACK-04 = CLOSED.
+SYSTEM_KNOWN_GOOD = ESTABLISHED_WITH_LIMITATIONS_CURRENT_ACCOUNT.
+SECOND_ACCOUNT_CLEAN_ROOM = HOLD_BY_USER.
+MULTI_ACCOUNT_READBACK = DEFERRED_UNTIL_SECOND_ACCOUNT_AVAILABLE.
+CPGS_MIGRATION = NOT_STARTED_REQUIRES_SEPARATE_AUTHORIZATION.
+
+Stop after one local Q001 commit and CLEAN / ahead-one verification.
+Manual final push and exact remote/local readback remain required.
+No further mutation is authorized after closeout verification.
