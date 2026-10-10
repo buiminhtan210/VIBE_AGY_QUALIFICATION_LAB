@@ -1,3 +1,34 @@
+# Current Phase 3A2-R3 qualification authority
+
+MODE = SYSTEM_MAINTENANCE
+PHASE3A2_Q001_SINGLE_CODEX_ROUND_TRIP = ACTIVE / LIVE_GATE_PENDING_OR_RUNNING
+Active product Pack: `NONE`.
+Pack ID: `VIBE-Q001-CODEX-ROUNDTRIP-001`.
+Recovery authority: `D:\VIBE_CODE_WORKSPACE_BASELINE\90_WORKSPACE\SYSTEM_MAINTENANCE_TASKS\VIBE_EXECUTION_ORCHESTRATION_PHASE3A2_Q001_SINGLE_CODEX_ROUND_TRIP\PHASE3A2_R3_PREFLIGHT_LOGIC_RECOVERY_v0.1.md`.
+Task/safety authority: original Phase3A2 Pack; R2 corrects only binary pin; R3 corrects only preflight comparison.
+SYSTEM_MAINTENANCE_PACK_BINDING = EXPLICIT_PHASE3A2_AUTHORITY
+PHASE1_PRODUCT_PACK_ELIGIBILITY_GENERALIZED = NO; Phase-1 product-Pack HOLD semantics remain unchanged.
+Exactly one logical Write Owner / write_owner_key: `Q001.PHASE3A2.SINGLE_CODEX`.
+Host handles Gate O and verified candidate checkpoint; one sole Codex CLI executor writes only the isolated candidate marker under this same owner key.
+Gate O: only five .vibe files; exactly one local opening commit: [Q001] Open Phase 3A2 Single Codex round-trip qualification.
+The opening SHA is recorded in Pilot evidence after commit and becomes exact live manifest base_ref.
+Gate L: SINGLE_EXECUTOR; maximum one live dispatch; isolated worktree only.
+Only allowed/required candidate write: qualification/codex-roundtrip/ROUND_TRIP_MARKER.txt
+Exact bytes: ASCII VIBE_Q001_CODEX_ROUND_TRIP_PASS followed by one LF (0x0A); no CR/BOM.
+No candidate .vibe/test/source/config/runtime/harness mutation. No Git use or subagents by the live executor.
+Host verifies exact scope/bytes, no Git/subagent events, unchanged HEAD before host candidate checkpoint, and candidate/base CLEAN.
+Pilot-owned evidence root: `D:\VIBE_CODE_WORKSPACE_BASELINE\80_PROJECTS\VIBE_MULTI_AGENT_PILOT_v0.2\evidence\external-single-executor\VIBE_AGY_QUALIFICATION_LAB\PHASE3A2_R3_20261010_231430`.
+Corrected controlling Codex SHA256: d13914ced6c7af174d8d638db938284231227312104b06a25e9608c632a7daec
+Historical HOLD-1 and HOLD-2 remain immutable. No --version temp/PATH warning remediation.
+Forbidden: AGY, subagents, independent workers, second dispatch, merge, push, deploy, fetch, pull, reset, clean, rebase, amend, cherry-pick.
+System/90_WORKSPACE/registries/P001/runtime/settings/auth/config/network are read-only. No secrets are inspected or copied.
+On mandatory failure STOP; preserve evidence and state; no automatic retry or cleanup.
+Gate R Web readback is required; Gate C closure/lane promotion is NOT AUTHORIZED. Keep Q001 ACTIVE after local disposition.
+No final Phase3A2 PASS may be declared locally. WEB_READBACK_REQUIRED = YES. STOP after Gate L.
+
+---
+Previous completed Pack history follows verbatim; its write grants and next actions are historical, not current authority.
+
 # Current Pack
 
 ## Product Pack
