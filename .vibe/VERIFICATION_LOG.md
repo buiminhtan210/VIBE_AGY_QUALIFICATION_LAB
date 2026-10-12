@@ -181,3 +181,26 @@ commit and CLEAN / ahead-one readback. No push; no next qualification/product Pa
 ## 2026-10-10 - Phase3A2-R3 Gate O opening
 
 Preflight PASS: corrected exact historical dirty-set comparison; both HOLD SHA manifests PASS; Q001 main/527143b9f755e270b7c7e11a0f217a7dbf19afdc/CLEAN and original .vibe preimages unchanged; Pilot b13c3073f49af04f8f251f4371ca84a475d7abbd tracked CLEAN; current registries and exact Codex path/version/two-method SHA pin confirmed. Active product Pack NONE; one owner Q001.PHASE3A2.SINGLE_CODEX. Gate L NOT_RUN at opening. Exact opening SHA and later live evidence stay in D:\VIBE_CODE_WORKSPACE_BASELINE\80_PROJECTS\VIBE_MULTI_AGENT_PILOT_v0.2\evidence\external-single-executor\VIBE_AGY_QUALIFICATION_LAB\PHASE3A2_R3_20261010_231430. No closure, integration, retry or lane promotion; Web Gate R required.
+
+## 2026-10-12 - Phase3A2 Gate C Split C1-Q001 closure
+
+Observation: 2026-10-12T21:46:36.495834+07:00
+Authority: D:\VIBE_CODE_WORKSPACE_BASELINE\90_WORKSPACE\SYSTEM_MAINTENANCE_TASKS\VIBE_EXECUTION_ORCHESTRATION_PHASE3A2_Q001_SINGLE_CODEX_ROUND_TRIP\PHASE3A2_GATE_C_SPLIT_RECOVERY_v0.1.md
+Authority SHA256: c47d0494e57323c0f1f4ef0bbd0aa69ab23849a653fedbfd343ba148a16d8959
+
+Local Q001 preflight: PASS; main / 9b261d0316b6c4ec086cceea9cd779958e36a937 / CLEAN; Phase3A2 ACTIVE; Active product Pack NONE.
+Web-accepted disposition persisted: PHASE3A2_Q001_SINGLE_CODEX_ROUND_TRIP = PASS / WEB_READBACK_VERIFIED / CLOSED_WITH_LIMITATIONS.
+Candidate c8f3e8ed9c65353c566ffd6ec9df7c79e0964ad4 = WEB_VERIFIED / ISOLATED / UNMERGED; Pilot R5 ba0e926d3ac6a21c6089fbc5445e05509694f7d2 = WEB_VERIFIED. External identities are frozen Pack inputs, not local cross-repo readback.
+Marker SHA256 = 69e2c1db34a3db7b206c205ffbe9c33820040a003d68558128f05aa3e008d6bf.
+Q001.PHASE3A2.SINGLE_CODEX = RELEASED; Active product Pack NONE; no active Phase3A2 live gate, automatic successor Pack, Phase1 eligibility generalization or lane promotion.
+Historical R4 HOLD and R5 host-only recovery remain distinct; no fresh post-patch live test, backend attestation or merge/push/deploy qualification is claimed.
+CROSS_REPO_ACCESS_ATTEMPTED_THIS_C1 = NO; RUNTIME_EXECUTION = NOT_RUN; C2 = NOT_RUN; registry mutation / merge / cherry-pick / push / deploy = false.
+Verification plan: exact five-file diff from opening base; local diff whitespace check; non-control Q001 hashes unchanged; exactly one local closure checkpoint and CLEAN readback. Exact closure SHA/final results returned after commit, not predicted here.
+Frozen Q001 preimage SHA256:
+- .vibe/CURRENT_STATE.md = c6e632ba1c8009a06bca23a830db8c9afa826c6293d0b5d4e7b21c038dea5c5c
+- .vibe/CURRENT_PACK.md = 478b4632352ee8115c0689f877729e4e27f18a3e89833e33ffd45e22c1edef91
+- .vibe/CHANGE_SCOPE.md = 0529f4a7b8e31b00bd852cfca1e054059a68e97f45611c1e1df1710ae04aea8b
+- .vibe/HANDOVER.md = 90b4b543402bb9380192be8adbb8e2cbc346a6b9c8b7b83740bb10144451d1ac
+- .vibe/VERIFICATION_LOG.md = 7254c7f0d2944b6215ce00db58b00a59dd814b19a7ed15081750cc52ace65857
+
+WEB_READBACK_REQUIRED = YES. STOP after C1 local verification. C2 requires separate Web authorization after Q001 closure readback.

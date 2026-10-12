@@ -1,30 +1,41 @@
-# Current Phase 3A2-R3 qualification authority
+# Current Pack - Phase3A2 closure persisted; no active live Pack
 
-MODE = SYSTEM_MAINTENANCE
-PHASE3A2_Q001_SINGLE_CODEX_ROUND_TRIP = ACTIVE / LIVE_GATE_PENDING_OR_RUNNING
+MODE = SYSTEM_MAINTENANCE / STATE-ONLY CLOSURE
+PHASE3A2_Q001_SINGLE_CODEX_ROUND_TRIP = PASS / WEB_READBACK_VERIFIED / CLOSED_WITH_LIMITATIONS
 Active product Pack: `NONE`.
-Pack ID: `VIBE-Q001-CODEX-ROUNDTRIP-001`.
-Recovery authority: `D:\VIBE_CODE_WORKSPACE_BASELINE\90_WORKSPACE\SYSTEM_MAINTENANCE_TASKS\VIBE_EXECUTION_ORCHESTRATION_PHASE3A2_Q001_SINGLE_CODEX_ROUND_TRIP\PHASE3A2_R3_PREFLIGHT_LOGIC_RECOVERY_v0.1.md`.
-Task/safety authority: original Phase3A2 Pack; R2 corrects only binary pin; R3 corrects only preflight comparison.
-SYSTEM_MAINTENANCE_PACK_BINDING = EXPLICIT_PHASE3A2_AUTHORITY
-PHASE1_PRODUCT_PACK_ELIGIBILITY_GENERALIZED = NO; Phase-1 product-Pack HOLD semantics remain unchanged.
-Exactly one logical Write Owner / write_owner_key: `Q001.PHASE3A2.SINGLE_CODEX`.
-Host handles Gate O and verified candidate checkpoint; one sole Codex CLI executor writes only the isolated candidate marker under this same owner key.
-Gate O: only five .vibe files; exactly one local opening commit: [Q001] Open Phase 3A2 Single Codex round-trip qualification.
-The opening SHA is recorded in Pilot evidence after commit and becomes exact live manifest base_ref.
-Gate L: SINGLE_EXECUTOR; maximum one live dispatch; isolated worktree only.
-Only allowed/required candidate write: qualification/codex-roundtrip/ROUND_TRIP_MARKER.txt
-Exact bytes: ASCII VIBE_Q001_CODEX_ROUND_TRIP_PASS followed by one LF (0x0A); no CR/BOM.
-No candidate .vibe/test/source/config/runtime/harness mutation. No Git use or subagents by the live executor.
-Host verifies exact scope/bytes, no Git/subagent events, unchanged HEAD before host candidate checkpoint, and candidate/base CLEAN.
-Pilot-owned evidence root: `D:\VIBE_CODE_WORKSPACE_BASELINE\80_PROJECTS\VIBE_MULTI_AGENT_PILOT_v0.2\evidence\external-single-executor\VIBE_AGY_QUALIFICATION_LAB\PHASE3A2_R3_20261010_231430`.
-Corrected controlling Codex SHA256: d13914ced6c7af174d8d638db938284231227312104b06a25e9608c632a7daec
-Historical HOLD-1 and HOLD-2 remain immutable. No --version temp/PATH warning remediation.
-Forbidden: AGY, subagents, independent workers, second dispatch, merge, push, deploy, fetch, pull, reset, clean, rebase, amend, cherry-pick.
-System/90_WORKSPACE/registries/P001/runtime/settings/auth/config/network are read-only. No secrets are inspected or copied.
-On mandatory failure STOP; preserve evidence and state; no automatic retry or cleanup.
-Gate R Web readback is required; Gate C closure/lane promotion is NOT AUTHORIZED. Keep Q001 ACTIVE after local disposition.
-No final Phase3A2 PASS may be declared locally. WEB_READBACK_REQUIRED = YES. STOP after Gate L.
+Q001.PHASE3A2.SINGLE_CODEX = RELEASED
+ACTIVE_PHASE3A2_LIVE_GATE = NONE
+SUCCESSOR_PACK_AUTOMATICALLY_OPENED = NO
+PHASE1_PRODUCT_PACK_ELIGIBILITY_GENERALIZED = NO
+Q001_CODEX_LANE_PROMOTION = NO
+MERGE_PUSH_DEPLOY_QUALIFICATION = NOT_ESTABLISHED
+
+## Accepted external inputs - frozen Web authority
+Candidate = c8f3e8ed9c65353c566ffd6ec9df7c79e0964ad4 / WEB_VERIFIED / ISOLATED / UNMERGED
+Pilot R5 checkpoint = ba0e926d3ac6a21c6089fbc5445e05509694f7d2 / WEB_VERIFIED
+Marker = qualification/codex-roundtrip/ROUND_TRIP_MARKER.txt
+Marker SHA256 = 69e2c1db34a3db7b206c205ffbe9c33820040a003d68558128f05aa3e008d6bf / WEB_VERIFIED
+Hardened harness SHA256 = f9a0a9934e776d9d25185e1a45bbf2963c69a526afec1545b53bdbd4005238eb / WEB_VERIFIED
+C1 consumes these identities from the accepted split Pack. They were not re-read from Pilot Git or the candidate worktree in this closure.
+
+## Retained limitations
+- Hardened harness has not been exercised by a fresh post-patch live Codex dispatch.
+- R4 raw harness result remains historical HOLD; R5 host-only recovery is the accepted candidate recovery.
+- Backend model identity is not independently attested.
+- No merge/push/deploy qualification or Q001 Codex lane promotion is established.
+- Phase1 product-Pack eligibility semantics are not generalized.
+
+## C1 closure execution and next gate
+Authority: D:\VIBE_CODE_WORKSPACE_BASELINE\90_WORKSPACE\SYSTEM_MAINTENANCE_TASKS\VIBE_EXECUTION_ORCHESTRATION_PHASE3A2_Q001_SINGLE_CODEX_ROUND_TRIP\PHASE3A2_GATE_C_SPLIT_RECOVERY_v0.1.md
+Authority SHA256: c47d0494e57323c0f1f4ef0bbd0aa69ab23849a653fedbfd343ba148a16d8959
+Local opening/base: main / 9b261d0316b6c4ec086cceea9cd779958e36a937 / CLEAN before closure.
+Only the five Q001 .vibe control files may change. One local commit: [Q001] Close Phase 3A2 Single Codex round-trip qualification.
+Closure checkpoint SHA is returned after commit; no future/self-referential SHA is inserted here.
+CROSS_REPO_ACCESS_ATTEMPTED_THIS_C1 = NO; Pilot Git and candidate worktree were not accessed.
+RUNTIME_EXECUTION_THIS_C1 = NOT_RUN; registry mutation / merge / cherry-pick / push / deploy = false.
+WEB_READBACK_REQUIRED = YES
+NEXT_SAFE_ACTION = STOP_AFTER_C1_LOCAL_VERIFICATION; Web independently verifies Q001 closure before any separately authorized C2.
+C2_EXECUTION_THIS_C1 = NOT_RUN / NOT_AUTHORIZED
 
 ---
 Previous completed Pack history follows verbatim; its write grants and next actions are historical, not current authority.
